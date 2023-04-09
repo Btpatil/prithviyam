@@ -1,0 +1,105 @@
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  background-color:black;
+}
+.agribusiness-section h1{
+  text-align:center;
+  font-size: 3rem;
+  color:#8cc894;
+  margin:70px 0;
+  font-family: 'Labrada', serif;
+}
+.project-area {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  row-gap: 20px;
+  column-gap: 100px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+  
+.project-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-top:30px;
+}
+  
+#honey{
+  background-image: url('https://imgs.search.brave.com/a0BqtuGw0dQYeNaUJZ5DADbwXlBKnQyO7QCAjIMnZq8/rs:fit:1200:627:1/g:ce/aHR0cHM6Ly9pLnN3/bmNkbi5jb20vbWVk/aWEvMTIwMHcvdmlh/LzEzMDYwLWdldHR5/aW1hZ2VzLW1ldGth/bG92YS5qcGc');
+  /*opacity: 0.75;*/
+  background-size: cover;
+}
+#jaggery{
+  background-image: url('https://imgs.search.brave.com/Q3PvDurkru-Ef15NOO_qCQefIWMJcrk0W9GNXPxek4o/rs:fit:1200:720:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZmlyc3Rwb3N0/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxOS8xMi9HZXR0/eUltYWdlcy02MzYx/NDQ2NTZhLmpwZw');
+  /*opacity: 0.75;*/
+  background-size: cover;
+}
+#spices{
+  background-image: url('https://imgs.search.brave.com/HxheRChKHnuyqivb248dd7K13R6Ei0KmaL59UHD2NR0/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9nbGZv/b2RzLmNvbS5hdS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAxOC8x/MS9pU3RvY2stODUy/MDY4MDU2LmpwZw');
+  /*opacity: 0.75;*/
+  background-size: cover;
+}
+#tea{
+  background-image: url('https://imgs.search.brave.com/IjHVusK_yiQ_N0WT8mqOFqPnH9ecZT8DcabgtJUEECg/rs:fit:1200:836:1/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vd3d3Lmhl/YWx0aGZpdG5lc3Ny/ZXZvbHV0aW9uLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAx/NS8wNC9pU3RvY2st/NTk3NjU0MzU0Lmpw/Zz9maXQ9MTI1NCUy/QzgzNiZzc2w9MQ');
+  /*opacity: 0.75;*/
+  background-size: cover;
+}
+  
+.project-item-content {
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-top:50%;
+  margin-bottom: 15px;
+  color:white;
+  padding:10px;
+}
+
+.projext-item-content-titel {
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+  
+.projext-item-content-text {
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 1em;
+}
+.honey-color{
+  color:#EBA937;
+}
+.jaggery-color{
+  color:#CE7A34;
+}
+.spices-color{
+  color:#c54603;
+}
+.tea-color{
+  color:	
+  #d0f0c0;
+}
+@media screen and (max-width: 1100px) {
+  .project-area {
+    grid-template-columns: 40% 40%;
+    column-gap: 20px;
+    row-gap: 17px;
+  }
+}
+@media screen and (max-width: 501px) {
+  .project-area {
+    grid-template-columns: 80%;
+    column-gap: 20px;
+    row-gap: 17px;
+  }
+  #honey-icon, #jaggery-incon,#spices-icon, #tea-incon{
+    display:none;
+  }
+}
