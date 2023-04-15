@@ -22,9 +22,6 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   height: 70px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -57,7 +54,6 @@
 }
 
 .navbar .links {
-  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -236,7 +232,12 @@
   -webkit-text-fill-color: transparent;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+  .navbar {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .navbar .links {
     display: none;
     position: relative;
@@ -311,7 +312,8 @@
 .first {
   background-color: #131222;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #22203b), to(#1c1b31));
-  background: linear-gradient(180deg, #22203b 50%, #1c1b31 100%);
+  background: linear-gradient(#22203b 50%, #1c1b31 100%);
+  background: radial-gradient(#0d0d0d, #000000);
 }
 
 .first .container-main {
@@ -569,6 +571,7 @@
   background: linear-gradient(180deg, #13131d 85%, #171724 95%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #1c1b31), to(#181729));
   background: linear-gradient(180deg, #1c1b31 50%, #181729 100%);
+  background: radial-gradient(#0d0d0d, #000000);
 }
 
 .second .section-title {
@@ -840,6 +843,7 @@
   background: linear-gradient(180deg, #171724 65%, #14141c 95%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #181729), to(#141322));
   background: linear-gradient(180deg, #181729 50%, #141322 100%);
+  background: radial-gradient(#0d0d0d, #000000);
 }
 
 .circularity .section-title {
@@ -895,15 +899,14 @@
 }
 
 .circularity .row .card {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 40%;
-          flex: 1 0 40%;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 8px 10px;
-  background-color: #242337;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -920,11 +923,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
   padding: 5px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+.circularity .row .card .content .heading {
+  line-height: 60px;
 }
 
 .circularity .row .card .content .heading h1 {
@@ -935,6 +941,203 @@
   font-size: larger;
   line-height: 2em;
   text-align: justify;
+}
+
+.circularity .row .card .content .info .img img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+}
+
+.circularity .row .card .content .info .journeys {
+  padding: 25px 0;
+  margin: auto auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.circularity .row .card .content .info .journeys .journeycard {
+  padding: 1.5rem 1.5rem;
+  width: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.circularity .row .card .content .info .journeys .journeycard .img img {
+  width: 50px;
+  height: 50px;
+}
+
+.circularity .row .card .content .info .journeys .journeycard .heading {
+  position: relative;
+  background: -webkit-gradient(linear, left top, right top, from(#d2d4b3), to(#f4f4d5b6));
+  background: linear-gradient(to right, #d2d4b3 0%, #f4f4d5b6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 25px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.circularity .row .card .content .info .journeys .journeycard .heading::before {
+  content: "";
+  position: absolute;
+  width: 15%;
+  height: 3px;
+  background: -webkit-gradient(linear, left top, right top, from(#d6da7c), to(#f3f2ac));
+  background: linear-gradient(to right, #d6da7c 0%, #f3f2ac 100%);
+  opacity: 0.5;
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+  bottom: 0;
+}
+
+.circularity .row .card .content .info .journeys .journeycard .details {
+  background: -webkit-gradient(linear, left top, right top, from(#d6d7c6), to(#d7d7b5));
+  background: linear-gradient(to right, #d6d7c6 0%, #d7d7b5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 15px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.circularity .row .card .content .info .journeys .journeycard:hover {
+  background-color: #100d17;
+}
+
+.circularity .row .card .content .info .journeys .journeycard:hover .heading {
+  font-weight: 700;
+  background: -webkit-gradient(linear, left top, right top, from(#d6da7c), to(#f3f2ac));
+  background: linear-gradient(to right, #d6da7c 0%, #f3f2ac 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.circularity .row .card .content .info .journeys .journeycard:hover .heading::before {
+  opacity: 1;
+}
+
+.circularity .row .card .content .info .journeys #one {
+  border-left: 1px solid #f3f2ac;
+  position: relative;
+}
+
+.circularity .row .card .content .info .journeys #one::before {
+  content: '';
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, from(#d2d4b3), to(#f4f4d5b6));
+  background: linear-gradient(to right, #d2d4b3 0%, #f4f4d5b6 100%);
+}
+
+.circularity .row .card .content .info .journeys #one:hover::before {
+  background: -webkit-gradient(linear, left top, right top, from(#d6da7c), to(#f3f2ac));
+  background: linear-gradient(to right, #d6da7c 0%, #f3f2ac 100%);
+}
+
+.circularity .row .card .content .info .journeys #two {
+  border-left: 1px solid #f3f2ac;
+  position: relative;
+}
+
+.circularity .row .card .content .info .journeys #two::before {
+  content: "";
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, from(#d2d4b3), to(#f4f4d5b6));
+  background: linear-gradient(to right, #d2d4b3 0%, #f4f4d5b6 100%);
+}
+
+.circularity .row .card .content .info .journeys #two:hover::before {
+  background: -webkit-gradient(linear, left top, right top, from(#d6da7c), to(#f3f2ac));
+  background: linear-gradient(to right, #d6da7c 0%, #f3f2ac 100%);
+}
+
+.circularity .row .card .content .info .journeys #three {
+  border-left: 1px solid #f3f2ac;
+  position: relative;
+}
+
+.circularity .row .card .content .info .journeys #three::before {
+  content: "";
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, from(#d2d4b3), to(#f4f4d5b6));
+  background: linear-gradient(to right, #d2d4b3 0%, #f4f4d5b6 100%);
+}
+
+.circularity .row .card .content .info .journeys #three:hover::before {
+  background: -webkit-gradient(linear, left top, right top, from(#d6da7c), to(#f3f2ac));
+  background: linear-gradient(to right, #d6da7c 0%, #f3f2ac 100%);
+}
+
+.circularity .row .card .content .cards .card {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 8px 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #ccc;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.circularity .row .card .content .cards .card .content {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.circularity .row .card .content .cards .card .content .info {
+  font-size: large;
+  line-height: 2em;
+}
+
+.circularity .row .card .content .cards .card .img {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+
+.circularity .row .card .content .cards .card .img img {
+  width: 100% !important;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .circularity .row .card .content .cards .card .content {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+  .circularity .row .card .content .cards .card .img {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
 }
 
 .circularity .row .card .content .numbers {
@@ -956,49 +1159,9 @@
   text-align: center;
 }
 
-.circularity .row .card .img {
-  width: 50%;
-  height: 100%;
-}
-
-.circularity .row .card .img img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  opacity: 0.1;
-}
-
-.circularity .row .reverse {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
 @media (max-width: 1024px) {
   .circularity {
     padding: 10px;
-  }
-  .circularity .row .card {
-    -webkit-box-flex: 100%;
-        -ms-flex: 100%;
-            flex: 100%;
-  }
-}
-
-@media (max-width: 1024px) and (max-width: 500px) {
-  .circularity .row .card {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .circularity .row .card .content {
-    width: 100%;
-  }
-  .circularity .row .card .img {
-    width: 100%;
   }
 }
 
@@ -1008,6 +1171,7 @@
   background: linear-gradient(180deg, #14141c 85%, #14141b 95%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #141322), to(#0e0d17));
   background: linear-gradient(180deg, #141322 50%, #0e0d17 100%);
+  background: radial-gradient(#0d0d0d, #000000);
   padding: 50px 50px;
 }
 
@@ -1116,6 +1280,12 @@
   line-height: 25px;
 }
 
+.impact .row .impactcard .content ul {
+  margin-left: 3%;
+  line-height: 25px;
+  color: #ffffffba;
+}
+
 .impact .row .impactcard .readmore {
   position: relative;
   background: -webkit-gradient(linear, left top, right top, color-stop(45%, #fafac6), color-stop(95%, #f8d3a2));
@@ -1131,6 +1301,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.impact .row .impactcard:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #141322), to(#0e0d17));
+  background: linear-gradient(180deg, #141322 50%, #0e0d17 100%);
 }
 
 .impact .row .impactcard:hover .circle {
@@ -1176,6 +1351,7 @@ footer {
   background: linear-gradient(180deg, #14141b 45%, #000000 95%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #0e0d17), to(#0a0911));
   background: linear-gradient(180deg, #0e0d17 50%, #0a0911 100%);
+  background: radial-gradient(#0d0d0d, #000000);
   font-size: 13px;
   line-height: 20px;
 }
