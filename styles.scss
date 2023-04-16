@@ -1404,6 +1404,35 @@ footer {
   }
 }
 
+@media screen and (max-width:800px) {
+  footer{
+    .row{
+      width: 100%;
+  
+      .business{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .col{
+          flex: 33%;
+        }
+      }
+
+      .newsroom{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 10px 0;
+        .col{
+          flex: 33%;
+        }
+      }
+    }
+  }
+}
 
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */

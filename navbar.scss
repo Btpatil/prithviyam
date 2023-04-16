@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+// navbar
+.navbar {
+    position: sticky;
+    background-color: #131222;
+    font-family: Arial;
+    width: 100vw;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    z-index: 1;
+  
+    .logo {
+      // padding-inline: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+      padding: 0 5px;
+      margin-left: 15px;
+      height: 100%;
+      text-align: center;
+      font-weight: 800;
+      background: linear-gradient(to right, #d6da7c 0%, #f3f2ac 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  
+    .links {
+      // width: 90%;
+      display: flex;
+      height: 100%;
+      gap: 10px;
+  
+      .a {
+        // height: 100%;
+        position: relative;
+  
+        .link {
+          cursor: pointer;
+          display: flex;
+          font-size: 16px;
+          background: linear-gradient(to right, #d6da7c 0%, #f3f2ac 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-align: center;
+          // padding: 14px 16px;
+          text-decoration: none;
+          height: 100%;
+          align-items: center;
+          padding-inline: 10px;
+          font-weight: 500;
+  
+          // label{
+          //   cursor: pointer;
+          // }
+        }
+  
+        .arrow {
+          cursor: pointer;
+          display: none;
+        }
+  
+        .dropdown {
+          display: none;
+          position: fixed;
+          background-color: rgba(#131222, 0.95);
+          width: 100%;
+          max-height: 70%;
+          left: 0;
+          top: 70px;
+          margin: auto auto;
+          padding: 0 10%;
+          box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.4);
+          z-index: -1;
+          animation: fadeIn 1s;
+          flex-wrap: wrap;
+          overflow: auto;
+  
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+            }
+  
+            100% {
+              opacity: 1;
+            }
+          }
+  
+          .list {
+            list-style: none;
+            text-decoration: none;
+            position: relative;
+            height: 100%;
+            // width: 100%;
+            padding-top: 10px;
+            flex: 50%;
+  
+            a {
+              text-decoration: none;
+              color: #fff;
+  
+              &:hover {
+                background: linear-gradient(to right, #d6da7c 0%, #f3f2ac 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+            }
+  
+            // text-align: center ;
+            .header {
+              font-size: larger;
+              font-weight: 500;
+              padding: 10px 0;
+            }
+  
+            .line::after {
+              content: "";
+              display: block;
+              width: 80%;
+              height: 1px;
+              background-color: rgb(167, 167, 167);
+            }
+  
+            .items {
+              display: flex;
+              flex-wrap: wrap;
+              // width: 50%;
+  
+              .item,
+              a {
+                padding: 10px 0;
+                flex: 50%;
+                font-size: small;
+                font-weight: 100;
+                color: #ccc;
+              }
+            }
+          }
+        }
+  
+        @media (min-width:700px) {
+          &:hover .dropdown {
+            display: flex;
+          }
+        }
+  
+        @media (max-width: 800px) {
+          .dropdown .list {
+            flex: 100%;
+          }
+        }
+  
+        @media (max-width: 500px) {
+          .dropdown .list {
+            flex: 100%;
+  
+            .items .item {
+              flex: 100%;
+            }
+          }
+        }
+      }
+    }
+  
+    // .menu{
+    //   display: none;
+    //   height: 100%;
+    //   justify-content: center;
+    //   align-items: center;
+    input[type=checkbox] {
+  
+      display: none;
+  
+    }
+  
+    .hamburger {
+  
+      display: none;
+  
+      font-size: 24px;
+  
+      margin-right: 15px;
+      user-select: none;
+  
+      cursor: pointer;
+  
+      background: linear-gradient(to right, #d6da7c 0%, #f3f2ac 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  
+    // }
+  
+  
+    @media (max-width : 800px) {
+      justify-content: space-between;
+  
+      .links {
+        display: none;
+        position: relative;
+        flex: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: fit-content;
+        max-height: 90dvh;
+        background-color: rgba(0, 0, 0, 0.85);
+        background-color: #131222;
+        overflow: auto;
+  
+        .a {
+          position: relative;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          min-height: 50px;
+          max-height: 90vh;
+          justify-content: center;
+          overflow: auto;
+  
+          .arrow {
+            display: block;
+  
+            .material-symbols-outlined {
+              background: linear-gradient(to right, #d6da7c 0%, #f3f2ac 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+  
+          .dropdown {
+            position: relative;
+            z-index: 1;
+            flex: 100%;
+            max-height: 90vh;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.1);
+            background-color: #0e0d18;
+            box-shadow: none;
+          }
+  
+          input[type=checkbox]:checked~.dropdown {
+  
+            display: block;
+  
+          }
+  
+        }
+      }
+  
+      // .menu{
+      //   display: flex;
+  
+      input[type=checkbox]:checked~.links {
+  
+        display: block;
+  
+      }
+  
+      .hamburger {
+  
+        display: block;
+  
+      }
+  
+      // }
+    }
+  }

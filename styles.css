@@ -1543,5 +1543,45 @@ footer .row .newsletter .social-icons .fa-brands {
   }
 }
 
+@media screen and (max-width: 800px) {
+  footer .row {
+    width: 100%;
+  }
+  footer .row .business {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer .row .business .col {
+    -webkit-box-flex: 33%;
+        -ms-flex: 33%;
+            flex: 33%;
+  }
+  footer .row .newsroom {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+  }
+  footer .row .newsroom .col {
+    -webkit-box-flex: 33%;
+        -ms-flex: 33%;
+            flex: 33%;
+  }
+}
+
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 /*# sourceMappingURL=styles.css.map */
